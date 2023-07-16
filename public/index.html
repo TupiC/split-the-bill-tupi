@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1">
+    <title>Split the Bill - Italien Urlaub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">User Vinz</a>
+                </li>
+                <li class="flex-right" id="nav-logout">
+                    <a href="#">Logout</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Italien Urlaub</h2>
+        <div class="overlay">
+            <div id="overview">
+                <h2>Overview</h2>
+                <ul>
+                    <li class="flex-list"> Kalin <span
+                            class="negative flex-right">-1,96€</span>
+                    </li>
+                    <li class="flex-list"> Mary <span
+                            class="positive flex-right">+32,78€</span>
+                    </li>
+                    <li class="flex-list"> Tom <span
+                            class="negative flex-right">-61,59€</span>
+                    </li>
+                    <li class="flex-list"> Vinz <span
+                            class="positive flex-right">+30,77€</span>
+                    </li>
+                </ul>
+                <form action="addUser.php" method="post"
+                    class="center-ui">
+                    <input type="hidden" name="groupId" value="9">
+                    <input type="submit" value="Add user"
+                        name="submit" class="button">
+                </form>
+            </div>
+            <div id="expenses">
+                <h2>Expenses</h2>
+                <ul>
+                    <li>
+                        <a href="https://users.multimediatechnology.at/~fhs49031/divvyUp/transaction.php?transactionId=71"
+                            class="flex-list two-row-list">
+                            <p class="expense-title">test2</p>
+                            <p></p>
+                            <p>Mary</p>
+                            <p class="flex-right">30,00€</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://users.multimediatechnology.at/~fhs49031/divvyUp/transaction.php?transactionId=68"
+                            class="flex-list two-row-list">
+                            <p class="expense-title">test</p>
+                            <p></p>
+                            <p>Kalin</p>
+                            <p class="flex-right">30,00€</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://users.multimediatechnology.at/~fhs49031/divvyUp/transaction.php?transactionId=67"
+                            class="flex-list two-row-list">
+                            <p class="expense-title">einkauf</p>
+                            <p></p>
+                            <p>Vinz</p>
+                            <p class="flex-right">50,00€</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://users.multimediatechnology.at/~fhs49031/divvyUp/transaction.php?transactionId=45"
+                            class="flex-list two-row-list">
+                            <p class="expense-title">Tank</p>
+                            <p></p>
+                            <p>Mary</p>
+                            <p class="flex-right">100,00€</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://users.multimediatechnology.at/~fhs49031/divvyUp/transaction.php?transactionId=37"
+                            class="flex-list two-row-list">
+                            <p class="expense-title">Fischrestaurant
+                            </p>
+                            <p></p>
+                            <p>Vinz</p>
+                            <p class="flex-right">100,00€</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://users.multimediatechnology.at/~fhs49031/divvyUp/transaction.php?transactionId=36"
+                            class="flex-list two-row-list">
+                            <p class="expense-title">Pizzeria</p>
+                            <p></p>
+                            <p>Kalin</p>
+                            <p class="flex-right">80,00€</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://users.multimediatechnology.at/~fhs49031/divvyUp/transaction.php?transactionId=35"
+                            class="flex-list two-row-list">
+                            <p class="expense-title">Ausgleichszahlung
+                            </p>
+                            <p></p>
+                            <p>Mary</p>
+                            <p class="flex-right">15,00€</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://users.multimediatechnology.at/~fhs49031/divvyUp/transaction.php?transactionId=33"
+                            class="flex-list two-row-list">
+                            <p class="expense-title">Maut</p>
+                            <p></p>
+                            <p>Mary</p>
+                            <p class="flex-right">11,70€</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://users.multimediatechnology.at/~fhs49031/divvyUp/transaction.php?transactionId=32"
+                            class="flex-list two-row-list">
+                            <p class="expense-title">Einkauf</p>
+                            <p></p>
+                            <p>Kalin</p>
+                            <p class="flex-right">40,00€</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://users.multimediatechnology.at/~fhs49031/divvyUp/transaction.php?transactionId=31"
+                            class="flex-list two-row-list">
+                            <p class="expense-title">Pizza</p>
+                            <p></p>
+                            <p>Tom</p>
+                            <p class="flex-right">62,00€</p>
+                        </a>
+                    </li>
+                </ul>
+                <form action="addExpense.php" method="get"
+                    class="center-ui">
+                    <input type="hidden" name="groupId" value="9">
+                    <input type="submit" value="New expense"
+                        name="submit" class="button">
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Split the Bill - Based on DivvyUp by Vinzenz Alb</p>
+    </footer>
+</body>
+
+</html>

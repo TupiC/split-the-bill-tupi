@@ -1,0 +1,11 @@
+image: alpine:latest
+
+pages:
+  stage: deploy
+  script:
+  - echo 'Nothing to do... static html already in public/*'
+  artifacts:
+    paths:
+    - public
+  rules:
+  - if: $CI_PROJECT_NAME == "split_the_bill_public"

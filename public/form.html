@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1">
+    <title>Split the Bill - Italien Urlaub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">User Vinz</a>
+                </li>
+                <li class="flex-right" id="nav-logout">
+                    <a href="#">Logout</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Italien Urlaub</h2>
+        <div class="overlay">
+            <form action="addExpense.php" method="post">
+                <ul class="two-row-list flex-list-parent">
+                    <li>
+                        <label for="title">Title </label>
+                        <span class="flex-right">
+                            <input type="text" name="title"
+                                id="title">
+                        </span>
+                    </li>
+                    <li> Who paid? <span class="flex-right">
+                            <select name="payer">
+                                <option selected="selected" hidden="">
+                                    - Select User -</option>
+                                <option value="18">Kalin</option>
+                                <option value="20">Mary</option>
+                                <option value="19">Tom</option>
+                                <option value="1">Vinz</option>
+                            </select>
+                        </span>
+                    </li>
+                    <li>
+                        <label for="total">Total </label>
+                        <span class="flex-right">
+                            <input type="number" step=".01"
+                                name="total" class="number-field">€
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            <input type="checkbox" name="check_18"
+                                id="check_18" checked="checked"
+                                onclick="toggleUser(18)">
+                            <label for="check_18">Kalin: </label>
+                        </span>
+                        <span></span>
+                        <span>
+                            <input type="number" step=".01"
+                                name="portion_18" id="portion_18"
+                                value="0" class="number-field">€
+                        </span>
+                        <span class="flex-right"> or <input
+                                type="checkbox" name="equal_check_18"
+                                id="equal_check_18"
+                                onclick="toggleField(18)">
+                            <label for="equal_check_18"> split the
+                                rest</label>
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            <input type="checkbox" name="check_20"
+                                id="check_20" checked="checked"
+                                onclick="toggleUser(20)">
+                            <label for="check_20">Mary: </label>
+                        </span>
+                        <span></span>
+                        <span>
+                            <input type="number" step=".01"
+                                name="portion_20" id="portion_20"
+                                value="0" class="number-field">€
+                        </span>
+                        <span class="flex-right"> or <input
+                                type="checkbox" name="equal_check_20"
+                                id="equal_check_20"
+                                onclick="toggleField(20)">
+                            <label for="equal_check_20"> split the
+                                rest</label>
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            <input type="checkbox" name="check_19"
+                                id="check_19" checked="checked"
+                                onclick="toggleUser(19)">
+                            <label for="check_19">Tom: </label>
+                        </span>
+                        <span></span>
+                        <span>
+                            <input type="number" step=".01"
+                                name="portion_19" id="portion_19"
+                                value="0" class="number-field">€
+                        </span>
+                        <span class="flex-right"> or <input
+                                type="checkbox" name="equal_check_19"
+                                id="equal_check_19"
+                                onclick="toggleField(19)">
+                            <label for="equal_check_19"> split the
+                                rest</label>
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            <input type="checkbox" name="check_1"
+                                id="check_1" checked="checked"
+                                onclick="toggleUser(1)">
+                            <label for="check_1">Vinz: </label>
+                        </span>
+                        <span></span>
+                        <span>
+                            <input type="number" step=".01"
+                                name="portion_1" id="portion_1"
+                                value="0" class="number-field">€
+                        </span>
+                        <span class="flex-right"> or <input
+                                type="checkbox" name="equal_check_1"
+                                id="equal_check_1"
+                                onclick="toggleField(1)">
+                            <label for="equal_check_1"> split the
+                                rest</label>
+                        </span>
+                    </li>
+                    <li>
+                        <label for="comment">Comment: </label>
+                        <textarea name="comment"></textarea>
+                    </li>
+                </ul>
+                <input type="hidden" name="groupId" value="9">
+                <p class="center-ui"><input type="submit" value="Add"
+                        name="create" class="button"></p>
+            </form>
+        </div>
+        <script>
+            function toggleField(user) {
+                // Get the checkbox
+                let checkBox = document.getElementById("equal_check_" + user);
+                // Get the output text
+                let textField = document.getElementById("portion_" + user);
+
+                // If the checkbox is checked, display the output text
+                if (checkBox.checked) {
+                    textField.setAttribute("disabled", "disabled");
+                } else {
+                    textField.removeAttribute("disabled");
+                }
+            }
+
+            function toggleUser(user) {
+                // Get the checkbox
+                let checkBox = document.getElementById("check_" + user);
+
+                // If the checkbox is checked, display the output text
+                if (checkBox.checked) {
+                    document.getElementById("equal_check_" + user).removeAttribute("disabled", "disabled");
+                    toggleField(user);
+                } else {
+                    document.getElementById("equal_check_" + user).setAttribute("disabled", "disabled");
+                    document.getElementById("portion_" + user).setAttribute("disabled", "disabled");
+                }
+            }
+        </script>
+    </main>
+    <footer>
+        <p>Split the Bill - Based on DivvyUp by Vinzenz Alb</p>
+    </footer>
+</body>
+
+</html>

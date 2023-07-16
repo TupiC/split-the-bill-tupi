@@ -1,0 +1,35 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+split-the-bill-tupi/node_modules
+split-the-bill-tupi/.pnp
+split-the-bill-tupi/.pnp.js
+
+# testing
+split-the-bill-tupi/coverage
+
+# next.js
+split-the-bill-tupi/.next/
+split-the-bill-tupi/out/
+
+# production
+split-the-bill-tupi/build
+
+# misc
+split-the-bill-tupi/.DS_Store
+split-the-bill-tupi/*.pem
+
+# debug
+split-the-bill-tupi/npm-debug.log*
+split-the-bill-tupi/yarn-debug.log*
+split-the-bill-tupi/yarn-error.log*
+
+# local env files
+split-the-bill-tupi/.env*.local
+
+# vercel
+split-the-bill-tupi/.vercel
+
+# typescript
+split-the-bill-tupi/*.tsbuildinfo
+split-the-bill-tupi/next-env.d.ts
